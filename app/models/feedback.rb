@@ -8,3 +8,4 @@ class Feedback < ApplicationRecord
     # twitter logic here
   end
 end
+

@@ -26,7 +26,7 @@
     </div>
 
     <div class="mt-1">
-      <p class="text-right">50 / 250</p>
+      <p class="text-right"><span id="char_counter">0</span> / 250</p>
     </div>
 
     <div class="text-center">
@@ -41,3 +41,8 @@
     </div>
   </div>
 <% end %>
+<script type="text/javascript">
+document.getElementById('feedback[text]').addEventListener('keyup', function(){
+  document.getElementById('char_counter').innerText = this.value.length
+})
+</script>
