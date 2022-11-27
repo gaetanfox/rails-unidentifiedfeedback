@@ -7,7 +7,7 @@ class Feedback < ApplicationRecord
   after_create :send_tweet
 
   validates_presence_of :recipient_handle, :text ,message: "Recipient handle Can't be blank" # recipient_handle can't be blank
-  validates_length_of :text, minimum: 20, maximum: 250
+  validates_length_of :text, minimum: 5, maximum: 250
 
   def sanitize
     # insert any logic we want regarding the trnasformation of text, recipient_handle, etc fields
