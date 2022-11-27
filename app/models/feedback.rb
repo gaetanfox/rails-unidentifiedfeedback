@@ -4,6 +4,7 @@ class Feedback < ApplicationRecord
   after_create :send_tweet
   def send_tweet
     puts "Sending tweet"
-    # twotter logic here
+    TwitterService.tweet!(self.text)
+    # twitter logic here
   end
 end

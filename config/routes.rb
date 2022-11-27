@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'pages#home'
 
-  get 'search', to: 'pages#search'
+  post 'feedbacks', to: 'feedbacks#create'
 end
