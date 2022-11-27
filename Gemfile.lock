@@ -125,6 +125,9 @@ GEM
       version_gem (~> 1.1)
     oauth-tty (1.0.5)
       version_gem (~> 1.1, >= 1.1.1)
+    passenger (6.0.15)
+      rack
+      rake (>= 0.8.1)
     pg (1.4.5)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -210,6 +213,7 @@ DEPENDENCIES
   jbuilder
   json
   oauth
+  passenger (>= 5.3.2)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
