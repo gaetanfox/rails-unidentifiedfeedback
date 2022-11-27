@@ -1,10 +1,13 @@
 require 'oauth/request_proxy/typhoeus_request' # TODO: remove this
 
 class TwitterService
-    def self.tweet!(message)
+    def self.message(feedback)
+        ".@#{feedback.recipient_handle}, #{feedback.text} --Anon" # => 280 characters (250 in the end)
+    end
+    def self.tweet!(feedback)
         
         body = {
-        "text": message
+        "text": message(feedback)
         }
 
         @consumer = OAuth::Consumer.new(
